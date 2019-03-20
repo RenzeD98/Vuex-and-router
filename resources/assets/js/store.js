@@ -24,7 +24,7 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
     state: { //variables
         count: 6,
-        message: 'test',
+        message: 'Pas deze tekst aan',
         todos: [
             { id: 1, text: 'banaan', done: true },
             { id: 2, text: 'appel',  done: false },

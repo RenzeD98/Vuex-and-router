@@ -5,13 +5,13 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Vervolg pagina</div>
                     <div class="panel-body">
-                        <span>{{count}}</span><br><br>
+                        <span>Count: {{count}}</span><br><br>
                         <button v-on:click="goBack">
                             Terug
                         </button>
-                        <button v-on:click="increment">increment</button>
+                        <button v-on:click="increment">Add 1 to count</button>
                         <br/><br/>
-                        <span>{{message}}</span>
+                        <span>Message saved in the store: <b>{{message}}</b></span>
                     </div>
                 </div>
             </div>
