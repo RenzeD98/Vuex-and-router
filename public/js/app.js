@@ -13656,7 +13656,26 @@ var routes = [{
     children: [{
         path: 'test',
         component: { template: '<div>Dit is de test child</div>' }
+    }, {
+        path: ':id',
+        component: { template: '<div>Dit is pagina: {{$route.params.id}}</div>' },
+        beforeEnter: function beforeEnter(to, from, next) {
+            if (Number.isInteger(parseInt(to.params.id))) {
+                return next();
+            } else {
+                return next({ path: '/404' });
+            }
+        }
     }]
+},
+
+//  ErrorPage
+{
+    path: '/404',
+    components: {
+        navbar: __WEBPACK_IMPORTED_MODULE_2__components_sections_Navbar___default.a,
+        default: __WEBPACK_IMPORTED_MODULE_6__components_pages_ErrorPage___default.a
+    }
 },
 
 //  DEFAULT ROUTE
@@ -17092,7 +17111,7 @@ var store = new __WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */].Store({
     state: { //variables
         count: 6,
         message: 'Pas deze tekst aan',
-        todos: [{ id: 1, text: 'banaan', done: true }, { id: 2, text: 'appel', done: false }, { id: 3, text: 'peer', done: true }, { id: 3, text: 'peer', done: true }, { id: 4, text: 'kiwi', done: false }]
+        todos: [{ id: 1, text: 'banaan', done: true }, { id: 2, text: 'appel', done: false }, { id: 3, text: 'peer', done: true }, { id: 4, text: 'kiwi', done: false }]
     },
     mutations: {
         //commiting changes to the variables

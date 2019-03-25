@@ -45,7 +45,27 @@ const routes = [
               path: 'test',
               component: { template: `<div>Dit is de test child</div>` }
             },
+            {
+                path: ':id',
+                component: { template: `<div>Dit is pagina: {{$route.params.id}}</div>`},
+                beforeEnter(to, from, next) {
+                    if(Number.isInteger(parseInt(to.params.id))) {
+                        return next();
+                    } else {
+                        return next({path: '/404'});
+                    }
+                }
+            }
         ]
+    },
+
+    //  ErrorPage
+    {
+        path: '/404',
+        components: {
+            navbar: Navbar,
+            default: ErrorPage,
+        },
     },
 
     //  DEFAULT ROUTE
