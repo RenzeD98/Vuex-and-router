@@ -23,27 +23,27 @@ const routes = [
     {
         path: '/',
         components: {
+            navbar: Navbar,
             default: HomePage,
-            navbar: Navbar
         },
     },
     {
         path: '/subpage',
         components: {
+            navbar: Navbar,
             default: SubPage,
-            navbar: Navbar
         },
     },
     {
         path: '/users',
         components: {
+            navbar: Navbar,
             default: UsersPage,
-            navbar: Navbar
         },
         children: [
             {
               path: 'test',
-              component: { template: '<div>Dit is de test child</div>' }
+              component: { template: `<div>Dit is de test child</div>` }
             },
         ]
     },
@@ -52,8 +52,8 @@ const routes = [
     {
         path: '*',
         components: {
+            navbar: Navbar,
             default: ErrorPage,
-            navbar: Navbar
         },
     }
 ];

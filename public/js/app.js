@@ -13638,20 +13638,20 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
 var routes = [{
     path: '/',
     components: {
-        default: __WEBPACK_IMPORTED_MODULE_3__components_pages_HomePage___default.a,
-        navbar: __WEBPACK_IMPORTED_MODULE_2__components_sections_Navbar___default.a
+        navbar: __WEBPACK_IMPORTED_MODULE_2__components_sections_Navbar___default.a,
+        default: __WEBPACK_IMPORTED_MODULE_3__components_pages_HomePage___default.a
     }
 }, {
     path: '/subpage',
     components: {
-        default: __WEBPACK_IMPORTED_MODULE_4__components_pages_SubPage___default.a,
-        navbar: __WEBPACK_IMPORTED_MODULE_2__components_sections_Navbar___default.a
+        navbar: __WEBPACK_IMPORTED_MODULE_2__components_sections_Navbar___default.a,
+        default: __WEBPACK_IMPORTED_MODULE_4__components_pages_SubPage___default.a
     }
 }, {
     path: '/users',
     components: {
-        default: __WEBPACK_IMPORTED_MODULE_5__components_pages_Userspage___default.a,
-        navbar: __WEBPACK_IMPORTED_MODULE_2__components_sections_Navbar___default.a
+        navbar: __WEBPACK_IMPORTED_MODULE_2__components_sections_Navbar___default.a,
+        default: __WEBPACK_IMPORTED_MODULE_5__components_pages_Userspage___default.a
     },
     children: [{
         path: 'test',
@@ -13663,8 +13663,8 @@ var routes = [{
 {
     path: '*',
     components: {
-        default: __WEBPACK_IMPORTED_MODULE_6__components_pages_ErrorPage___default.a,
-        navbar: __WEBPACK_IMPORTED_MODULE_2__components_sections_Navbar___default.a
+        navbar: __WEBPACK_IMPORTED_MODULE_2__components_sections_Navbar___default.a,
+        default: __WEBPACK_IMPORTED_MODULE_6__components_pages_ErrorPage___default.a
     }
 }];
 
@@ -16872,6 +16872,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -16917,7 +16918,9 @@ var render = function() {
               _vm._v(" "),
               _c("button", { on: { click: _vm.goBack } }, [
                 _vm._v("\n                        Terug\n                    ")
-              ])
+              ]),
+              _vm._v(" "),
+              _c("router-view")
             ],
             1
           )
@@ -17089,7 +17092,7 @@ var store = new __WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */].Store({
     state: { //variables
         count: 6,
         message: 'Pas deze tekst aan',
-        todos: [{ id: 1, text: 'banaan', done: true }, { id: 2, text: 'appel', done: false }, { id: 3, text: 'peer', done: true }, { id: 4, text: 'kiwi', done: false }]
+        todos: [{ id: 1, text: 'banaan', done: true }, { id: 2, text: 'appel', done: false }, { id: 3, text: 'peer', done: true }, { id: 3, text: 'peer', done: true }, { id: 4, text: 'kiwi', done: false }]
     },
     mutations: {
         //commiting changes to the variables

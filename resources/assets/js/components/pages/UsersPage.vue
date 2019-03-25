@@ -11,6 +11,7 @@
                         <button v-on:click="goBack">
                             Terug
                         </button>
+                        <router-view/>
                     </div>
                 </div>
             </div>
